@@ -8,9 +8,9 @@ def palindrome?(string)
     tail -= 1
   end
   if string[head] == string[tail]
-    puts 'palindrome'
+    puts "#{string}: palindrome"
   else
-    puts 'not palindrome'
+    puts "#{string}: not palindrome"
   end
 end
 
@@ -18,3 +18,4 @@ palindrome?("racecar")
 palindrome?("hello")
 palindrome?("race car")
 palindrome?("a memo here my mere home ma")
+palindrome?("abcbbbabc")
