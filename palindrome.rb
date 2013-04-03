@@ -3,14 +3,15 @@ def palindrome?(string)
   head = 0
   tail = string.length - 1
 
-  while head <= tail
-    head += 1
-    tail -= 1
-  end
   if string[head] == string[tail]
     puts "#{string}: palindrome"
   else
     puts "#{string}: not palindrome"
+  end
+
+  while head <= tail
+    head += 1
+    tail -= 1
   end
 end
 
