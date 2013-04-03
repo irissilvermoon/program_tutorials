@@ -24,10 +24,10 @@ elsif b_month == 'September' || b_month == '9'
   b_month = 9
 elsif b_month == 'October' || b_month == '10'
   b_month = 10
-elsif b_month = 'November' || b_month == '11'
+elsif b_month == 'November' || b_month == '11'
   b_month = 11
-elsif b_month = 'December' || b_month == '12'
-  b_month = 12
+elsif b_month == 'December' || b_month == '12'
+  b_month == 12
 end
 puts 'what day were you born?'
 b_day = gets.chomp.to_i
