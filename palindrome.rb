@@ -1,4 +1,5 @@
 def palindrome?(string)
+  string.gsub!(/\s/, '')
   head = 0
   tail = string.length - 1
 
@@ -16,3 +17,4 @@ end
 palindrome?("racecar")
 palindrome?("hello")
 palindrome?("race car")
+palindrome?("a memo here my mere home ma")
