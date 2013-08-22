@@ -7,18 +7,24 @@ def first_non_repeating_char(string)
 #check to see if the character is in the unique characters set
 #if not, place it there, if it is, put it in non_unique characters
 #return the first character in unique characters set.
+  require 'set'
 
-  unique = []
-  repeat = []
 
-  str = string.each_char.to_a
-  (0...str.length).each do |i|
-    unique << str
-    if unique.include?(str)
-      repeat << str
+
+
+    unique = Set.new()
+    repeat = Set.new()
+
+
+    string.each_char do |s|
+      if unique.include?(s)
+        unique.delete(s)
+        #if true, remove from unique and put into repeat
+        repeat << s
+      end
+      unique << s
     end
-  end
-  puts unique[0]
+  puts unique.first
 end
 
 
@@ -29,3 +35,4 @@ first_non_repeating_char("jjjijjj")
 first_non_repeating_char("abbeabbbeal")
 
 
+#unique includes all characters, if one of the characters is present, should remove that character
