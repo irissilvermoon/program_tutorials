@@ -8,16 +8,24 @@ def first_non_repeating_char(string)
 #if not, place it there, if it is, put it in non_unique characters
 #return the first character in unique characters set.
 
+  unique = []
+  repeat = []
 
-  UNIQUE_CHARACTERS = []
-  REPEAT_CHARACTERS = []
-
-
-
-
+  str = string.each_char.to_a
+  (0...str.length).each do |i|
+    unique << str
+    if unique.include?(str)
+      repeat << str
+    end
+  end
+  puts unique[0]
 end
+
+
 
 first_non_repeating_char("string")
 first_non_repeating_char("hello")
 first_non_repeating_char("jjjijjj")
 first_non_repeating_char("abbeabbbeal")
+
+

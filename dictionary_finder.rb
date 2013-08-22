@@ -10,17 +10,17 @@
 # # 1) There are two words in the string
 # # 2) There are n words in the string
 
-  def dictionary(word)
-    dictionary = ["apple", "pie", "a",
-                  "hello", "world", "he"]
+def dictionary(word)
+  dictionary = ["apple", "pie", "a",
+                "hello", "world", "he"]
 
-    dictionary.include?(word)
-  end
+  dictionary.include?(word)
+end
 
-  def dictionary_finder(string)
-    output = []
-    (0...string.length).each do |i|
-      (i...string.length).each do |j|
+def dictionary_finder(string)
+  output = []
+  (0...string.length).each do |i|
+    (i...string.length).each do |j|
       if dictionary(string[i..j])
         output << string[i..j]
       end
